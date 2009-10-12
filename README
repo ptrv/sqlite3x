@@ -1,3 +1,7 @@
 Modified version of sqlite3x.
 
 * Does not use boost library.
+
+Usage:
+
+* Just add all files to your project.
