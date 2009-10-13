@@ -28,10 +28,9 @@
 
 #include <string>
 #include <stdexcept>
-//#include <boost/utility.hpp>
 
 namespace sqlite3x {
-	class sqlite3_connection { // : boost::noncopyable {
+	class sqlite3_connection {
 	private:
 		friend class sqlite3_command;
 		friend class database_error;
@@ -91,7 +90,7 @@ namespace sqlite3x {
 		const sqlite3_connection& operator=( const sqlite3_connection& );
 	};
 
-	class sqlite3_transaction { // : boost::noncopyable {
+	class sqlite3_transaction {
 	private:
 		sqlite3_connection &con;
 		bool intrans;
@@ -109,7 +108,7 @@ namespace sqlite3x {
 		const sqlite3_transaction& operator=( const sqlite3_transaction& );
 	};
 
-	class sqlite3_command { // : boost::noncopyable {
+	class sqlite3_command {
 	private:
 		friend class sqlite3_reader;
 
