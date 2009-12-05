@@ -108,6 +108,7 @@ namespace sqlite3x {
 		const sqlite3_transaction& operator=( const sqlite3_transaction& );
 	};
 
+	//class sqlite3_reader;
 	class sqlite3_command {
 	private:
 		friend class sqlite3_reader;
