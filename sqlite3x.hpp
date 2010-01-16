@@ -16,7 +16,7 @@
 	2. Altered source versions must be plainly marked as such, and must not be
 		misrepresented as being the original software.
 	3. This notice may not be removed or altered from any source distribution.
-	
+
 	CVS Info :
 		$Author: phrostbyte $
 		$Date: 2005/06/16 20:46:40 $
@@ -102,13 +102,13 @@ namespace sqlite3x {
 		void begin();
 		void commit();
 		void rollback();
-		
+
 	private:  // emphasize the following members are private
 		sqlite3_transaction( const sqlite3_transaction& );
 		const sqlite3_transaction& operator=( const sqlite3_transaction& );
 	};
 
-	//class sqlite3_reader;
+	class sqlite3_reader;
 	class sqlite3_command {
 	private:
 		friend class sqlite3_reader;
@@ -143,7 +143,7 @@ namespace sqlite3x {
 		std::string executestring();
 		std::wstring executestring16();
 		std::string executeblob();
-		
+
 	private:  // emphasize the following members are private
 		sqlite3_command( const sqlite3_command& );
 		const sqlite3_command& operator=( const sqlite3_command& );
