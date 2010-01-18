@@ -22,7 +22,7 @@
 		D02181601102881C00B8B391 /* sqlite3x_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sqlite3x_reader.cpp; path = ../sqlite3x_reader.cpp; sourceTree = "<group>"; };
 		D02181611102881C00B8B391 /* sqlite3x_transaction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sqlite3x_transaction.cpp; path = ../sqlite3x_transaction.cpp; sourceTree = "<group>"; };
 		D02181621102881C00B8B391 /* sqlite3x.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sqlite3x.hpp; path = ../sqlite3x.hpp; sourceTree = "<group>"; };
-		D2AAC046055464E500DB518D /* libsqlite3x.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsqlite3x.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAC046055464E500DB518D /* libsqlite3xdebug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsqlite3xdebug.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 		1AB674ADFE9D54B511CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2AAC046055464E500DB518D /* libsqlite3x.a */,
+				D2AAC046055464E500DB518D /* libsqlite3xdebug.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,7 +102,7 @@
 			);
 			name = sqlite3x;
 			productName = sqlite3x;
-			productReference = D2AAC046055464E500DB518D /* libsqlite3x.a */;
+			productReference = D2AAC046055464E500DB518D /* libsqlite3xdebug.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -166,7 +166,7 @@
 		1DEB91F008733DB70010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
