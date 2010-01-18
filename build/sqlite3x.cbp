@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/libsqlite3xdebug" prefix_auto="1" extension_auto="1" />
+				<Option output="../lib/libsqlite3xd" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj/Debug/" />
 				<Option type="2" />
@@ -17,11 +17,11 @@
 					<Add option="-g" />
 				</Compiler>
 				<ExtraCommands>
-					<Add after="cp -p bin/Debug/libsqlite3xdebug.a ../lib" />
+					<Add after="cp -p ../lib/libsqlite3xd.a ../../lib" />
 				</ExtraCommands>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/libsqlite3x" prefix_auto="1" extension_auto="1" />
+				<Option output="../lib/libsqlite3x" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj/Release/" />
 				<Option type="2" />
@@ -34,7 +34,7 @@
 					<Add option="-s" />
 				</Linker>
 				<ExtraCommands>
-					<Add after="cp -p bin/Release/libsqlite3x.a ../lib" />
+					<Add after="cp -p ../lib/libsqlite3x.a ../../lib" />
 				</ExtraCommands>
 			</Target>
 		</Build>
@@ -44,12 +44,12 @@
 		<Linker>
 			<Add library="sqlite3" />
 		</Linker>
-		<Unit filename="sqlite3x.hpp" />
-		<Unit filename="sqlite3x_command.cpp" />
-		<Unit filename="sqlite3x_connection.cpp" />
-		<Unit filename="sqlite3x_exception.cpp" />
-		<Unit filename="sqlite3x_reader.cpp" />
-		<Unit filename="sqlite3x_transaction.cpp" />
+		<Unit filename="../sqlite3x.hpp" />
+		<Unit filename="../sqlite3x_command.cpp" />
+		<Unit filename="../sqlite3x_connection.cpp" />
+		<Unit filename="../sqlite3x_exception.cpp" />
+		<Unit filename="../sqlite3x_reader.cpp" />
+		<Unit filename="../sqlite3x_transaction.cpp" />
 		<Extensions>
 			<envvars />
 			<code_completion />
