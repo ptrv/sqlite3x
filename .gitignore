@@ -4,3 +4,8 @@ obj/*
 *.layout
 lib/*
 build/obj/*
+build/Debug/*
+build/Release/*
+build/*.ncb
+build/*.user
+build/*.suo
