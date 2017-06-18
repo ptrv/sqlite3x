@@ -149,6 +149,27 @@ namespace sqlite3x {
 		const sqlite3_command& operator=( const sqlite3_command& );
 	};
 
+#if __cplusplus > 199711L
+    namespace detail {
+    template<unsigned I, class T>
+        void st_multi_bind_index(sqlite3_command& st, T& arg) {
+            st.bind(I, arg);
+        }
+
+    template<unsigned I, class T, class... Args>
+        void st_multi_bind_index(sqlite3_command& st, T& arg, Args... args) {
+            st.bind(I, arg);
+            detail::st_multi_bind_index<I+1, Args...>(st, args...);
+        }
+    }
+
+    template<class... Args>
+        void multi_bind(sqlite3_command& st, Args... args) {
+            detail::st_multi_bind_index<1, Args...>(st, args...);
+        }
+#endif
+
+
 	class sqlite3_reader {
 	private:
 		friend class sqlite3_command;
